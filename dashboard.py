@@ -11,8 +11,8 @@ opts = df.columns.tolist()
 
 col1, col2 = st.columns(2)
 
-choice = st.multiselect(opts)
+choice = st.multiselect(label='Choose Columns',options=opts)
 
 fig = sns.heatmap(df[choice].corr())
 
-st.figure(fig)
+st.pyplot(fig=fig)
